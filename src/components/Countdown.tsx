@@ -33,6 +33,13 @@ export const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     <section 
       className="text-halo w-full py-24 overflow-hidden relative"
     >
+      {/* Section background */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
+        style={{ backgroundImage: "url('/xyz.jpg')" }}
+      />
+      <div aria-hidden="true" className="absolute inset-0 bg-[#fffaf0]/30 pointer-events-none" />
       <div className="container px-4 md:px-6 mx-auto relative z-10">
         <div className="flex flex-col items-center space-y-12 text-center">
           

@@ -49,13 +49,6 @@ export const RSVPForm: React.FC = () => {
 
   return (
     <section id="rsvp" className="text-halo w-full py-24 relative overflow-hidden">
-      {/* Section background */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
-        style={{ backgroundImage: "url('/xyz.jpg')" }}
-      />
-      <div aria-hidden="true" className="absolute inset-0 bg-[#fffaf0]/30 pointer-events-none" />
       
       {/* Subtle Glow Effects */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-3/4 bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none"></div>
