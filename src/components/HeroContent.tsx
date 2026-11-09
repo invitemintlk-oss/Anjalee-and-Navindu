@@ -25,12 +25,12 @@ export const HeroContent: React.FC = () => {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="/hero_arch.webp" 
+          src="/x.webp" 
           alt="Wedding background" 
           className="h-full w-full object-cover" 
           loading="eager" 
         />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.35)_0%,rgba(255,255,255,0.1)_60%,rgba(255,255,255,0)_100%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,250,240,0.8)_0%,rgba(255,250,240,0.45)_55%,rgba(255,250,240,0.15)_100%)]" />
       </div>
 
       <div className="relative z-10 w-full h-full flex flex-col justify-center items-center px-4">
