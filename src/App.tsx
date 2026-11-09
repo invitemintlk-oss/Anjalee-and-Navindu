@@ -4,7 +4,6 @@ import { Music, Music2, Volume2, VolumeX } from 'lucide-react';
 import { FloatingPetals } from './components/FloatingPetals';
 
 import { Countdown } from './components/Countdown';
-import { HappyCouple } from './components/HappyCouple';
 import { HomecomingDetails } from './components/HomecomingDetails';
 
 import { NoteFromUs } from './components/NoteFromUs';
@@ -83,7 +82,7 @@ export default function App() {
       {/* Background Music */}
       <audio
         ref={audioRef}
-        src={encodeURI("/Nothing's Gonna Change My Love For You - Music Travel Love ft. Bugoy Drilon.mp3")}
+        src={encodeURI("/Ben E King - Stand By Me (Lyrics).mp3")}
         loop
         autoPlay
         onPlay={() => setIsMusicPlaying(true)}
@@ -131,7 +130,6 @@ export default function App() {
 
             <Countdown targetDate={weddingDate} />
 
-            <HappyCouple />
 
 
 

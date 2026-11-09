@@ -73,19 +73,19 @@ export const HeroContent: React.FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
         >
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-display text-[#2b2115] leading-tight" style={{ fontFamily: "'Great Vibes', cursive" }}>
-            <span className="inline-block text-[1.3em] leading-none align-baseline">A</span>njalee
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-display text-[#2b2115] leading-tight" style={{ fontFamily: "'Pinyon Script', cursive" }}>
+            Anjalee
           </h1>
           
           <div className="my-1 sm:my-3 text-[#2b2115] opacity-90">
              <span className="text-4xl sm:text-5xl font-serif italic">&amp;</span>
           </div>
 
-          <h1 className="text-6xl sm:text-7xl md:text-8xl font-display text-[#2b2115] leading-tight" style={{ fontFamily: "'Great Vibes', cursive" }}>
-            <span className="inline-block text-[1.3em] leading-none align-baseline">N</span>avindu
+          <h1 className="text-6xl sm:text-7xl md:text-8xl font-display text-[#2b2115] leading-tight" style={{ fontFamily: "'Pinyon Script', cursive" }}>
+            Navindu
           </h1>
           
-          <p className="text-sm sm:text-lg md:text-xl font-sans tracking-[0.1em] sm:tracking-[0.15em] text-[#2b2115] uppercase mt-12 sm:mt-16">
+          <p className="text-sm sm:text-lg md:text-xl font-sans tracking-[0.1em] sm:tracking-[0.15em] text-[#2b2115] font-semibold uppercase mt-12 sm:mt-16">
             {dateText}
           </p>
         </motion.div>
