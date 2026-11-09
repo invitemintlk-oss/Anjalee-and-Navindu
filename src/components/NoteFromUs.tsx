@@ -55,7 +55,7 @@ export const NoteFromUs: React.FC = () => {
               <p className="text-[#3f3220] font-sans tracking-[0.3em] uppercase text-[10px] md:text-xs">
                 With love always
               </p>
-              <p className="font-display text-[#6b4c0f] text-4xl md:text-5xl" style={{ fontFamily: "'Great Vibes', cursive" }}>
+              <p className="text-[#6b4c0f] text-2xl md:text-4xl uppercase tracking-[0.15em] font-medium" style={{ fontFamily: "'Cinzel', serif" }}>
                 Anjalee &amp; Navindu
               </p>
             </div>
