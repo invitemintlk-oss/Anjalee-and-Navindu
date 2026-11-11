@@ -1,13 +1,45 @@
-import React from 'react';
-import { motion } from 'motion/react';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 
 interface IntroOverlayProps {
   onEnter: () => void;
 }
 
 export const IntroOverlay: React.FC<IntroOverlayProps> = ({ onEnter }) => {
+  const [videoDone, setVideoDone] = useState(false);
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden bg-white">
+      <AnimatePresence>
+        {!videoDone && (
+          <motion.div
+            key="intro-video"
+            className="absolute inset-0 z-20 bg-black"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+          >
+            <video
+              autoPlay
+              muted
+              playsInline
+              preload="auto"
+              onEnded={() => setVideoDone(true)}
+              onError={() => setVideoDone(true)}
+              className="absolute inset-0 w-full h-full object-cover"
+            >
+              <source src="/gemini_generated_video_1c2126fd.mp4" type="video/mp4" />
+            </video>
+            <button
+              onClick={() => setVideoDone(true)}
+              className="absolute bottom-8 right-6 font-sans px-5 py-2 bg-black/30 backdrop-blur-sm text-white/90 border border-white/40 rounded-full uppercase tracking-[0.25em] text-[10px] sm:text-xs hover:bg-white/20 transition-colors"
+            >
+              Skip
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       <img
         src="/hero_arch.webp"
         alt="Wedding arch with chandelier"
@@ -19,7 +51,7 @@ export const IntroOverlay: React.FC<IntroOverlayProps> = ({ onEnter }) => {
       <motion.div
         className="relative z-10 flex flex-col items-center text-center px-6 pt-[18vh] pb-[22vh]"
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        animate={videoDone ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 1.5, ease: 'easeOut' }}
       >
         <p className="text-[10px] sm:text-xs uppercase tracking-[0.35em] font-sans font-medium text-[#2b2115] mb-6">
